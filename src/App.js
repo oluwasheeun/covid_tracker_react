@@ -1,12 +1,19 @@
 import React from 'react';
+import Header from './components/Header';
+import ContactForm from './components/ContactForm';
+import Patients from './components/Patients';
 import './App.css';
+
+import PatientInfoState from './context/patient/PatientInfoState';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      <h1>COVID APP</h1>
-      </header>
+    <div className='container'>
+      <PatientInfoState>
+        <Header />
+        <ContactForm />
+        <Patients />
+      </PatientInfoState>
     </div>
   );
 }
